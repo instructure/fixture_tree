@@ -99,7 +99,7 @@ class FixtureTree
       end
     else
       delete
-      @path.write(data)
+      @path.open("wb") { |f| f << data }
     end
 
     self
